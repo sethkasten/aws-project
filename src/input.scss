@@ -1,0 +1,70 @@
+@import "input2";
+@import "myMixins";
+
+$myColor: red;
+$h1Color: aqua;
+$h2Color: blue;
+$h3Color: #F00345;
+$h4Color: rgba(0,30,50,50);
+
+.myText {
+    color: $myColor;
+}
+
+.myFlex {
+    display: flex;
+    font: {
+        family: Helvetica, sans-serif;
+        weight: 100;
+    }
+    h1 {
+        color: $h1Color;
+    }
+    h2 {
+        color: $h2Color;
+    }
+    h3 {
+        color: $h3Color;
+    }
+    h4 {
+        color: $h4Color;
+    }
+}
+
+.bodyText {
+    @include wildText($h2Color, rotate(30deg));
+}
+.bodyText2 {
+    @include wildText($h1Color, rotate(50deg));
+}
+
+.button1 {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button2 {
+    @extend .button1;
+
+    background-color: $h3Color;
+}
+
+// Define a function to replace a substring and convert to uppercase
+@function replace-and-uppercase($string, $search, $replace) {
+    $replaced-string: str-replace($string, $search, $replace);
+    @return to-upper-case($replaced-string);
+  }
+
+// Use the function to create a class with modified string content
+$original-string: "hello-world";
+$modified-string: replace-and-uppercase($original-string, "-", " ");
+
+.example::before {
+content: $modified-string;
+font-size: 20px;
+color: blue;
+}
+  

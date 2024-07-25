@@ -1,0 +1,12 @@
+@mixin wildText($borderColor: orange, $transformProp: rotate(0deg)) {
+    color: burlywood;
+    font: {
+        family: Arial;
+        size: 50px;
+        weight: bold;
+    }
+    border: 2px solid $borderColor;
+    transform: $transformProp;
+    -webkit-transform: $transformProp;
+    -ms-transform: $transformProp;
+}

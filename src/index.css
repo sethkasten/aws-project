@@ -1,0 +1,67 @@
+footer {
+  background-color: aquamarine;
+}
+
+.myText {
+  color: red;
+}
+
+.myFlex {
+  display: flex;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+}
+.myFlex h1 {
+  color: aqua;
+}
+.myFlex h2 {
+  color: blue;
+}
+.myFlex h3 {
+  color: #F00345;
+}
+.myFlex h4 {
+  color: rgb(0, 30, 50);
+}
+
+.bodyText {
+  color: burlywood;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+  border: 2px solid blue;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+}
+
+.bodyText2 {
+  color: burlywood;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+  border: 2px solid aqua;
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+}
+
+.button1, .button2 {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #F00345;
+}
+
+.example::before {
+  content: STR-REPLACE("HELLO-WORLD", "-", " ");
+  font-size: 20px;
+  color: blue;
+}
+
+/*# sourceMappingURL=index.css.map */
